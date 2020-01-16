@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNovaA-Light.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNovaA-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNova-Black.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNova-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNova-Regular.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNovaA-Thin.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNovaA-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNova-Bold.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNova-Extrabld.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNova-Extrabld.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Alt';
+  src: url('#{$font-path}/proximanova/ProximaNovaA-Bold.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNovaA-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova/ProximaNovaT-Thin.woff2') format('woff2'),
+  url('#{$font-path}/proximanova/ProximaNovaT-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+

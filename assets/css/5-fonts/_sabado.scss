@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Sabado';
+  src: url('#{$font-path}/sabado/Sabado-Italic.woff2') format('woff2'),
+  url('#{$font-path}/sabado/Sabado-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sabado';
+  src: url('#{$font-path}/sabado/Sabado.woff2') format('woff2'),
+  url('#{$font-path}/sabado/Sabado.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
