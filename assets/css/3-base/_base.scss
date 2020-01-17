@@ -13,6 +13,18 @@ body{
   padding: 30px 0px;
 }
 .page.page-menu{
+  .main-sag{
+    width: calc(100% - 330px);
+    @include md{
+      width: 100%;
+    }
+    @include sm{
+      width: 100%;
+    }
+    @include esm{
+      width: 100%;
+    }
+  }
   .main-sol{
     margin-right: 30px;
     @include md{
@@ -73,6 +85,8 @@ body{
       }
     }
   }
+}
+.page.page-menu2{
   .main-sag{
     width: calc(100% - 330px);
     @include md{
@@ -84,6 +98,146 @@ body{
     @include esm{
       width: 100%;
     }
+  }
+  .main-sol{
+    margin-right: 30px;
+    @include md{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    @include sm{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    @include esm{
+      width: 100%;
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+    }
+    .sol-wrap{
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: $box-shadow;
+      @include md{
+        width: 100%;
+      }
+      @include sm{
+        width: 100%;
+      }
+      @include esm{
+        width: 100%;
+      }
+      .accordion{
+        background: $white;
+        button{
+          width: 100%;
+          padding: 20px 20px;
+          font-weight: bold;
+          border-bottom: 1px solid #eaeaea;
+          text-decoration: none;
+          background: $white;
+          color: #818285;
+          transition: $transition-base-cs;
+          text-align: center;
+          border-radius: unset;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &:hover,&.active,&[aria-expanded="true"]{
+            box-shadow: -2px 0px 0px $red2;
+            color: $red;
+          }
+          &:nth-last-child(1){
+            border-bottom: 0;
+          }
+          span.minus-plus{
+            position: relative;
+            &:before{
+              transition: $transition-base-cs;
+              width: 20px;
+              height: 2px;
+              content: '';
+              background: $gray-500;
+              display: block;
+
+            }
+            &:after{
+              transition: $transition-base-cs;
+              position: absolute;
+              width: 2px;
+              height: 18px;
+              content: '';
+              display: block;
+              top: -8px;
+              right: 9px;
+              background: $gray-500;
+            }
+          }
+
+          &[aria-expanded="true"]{
+            span.minus-plus{
+              &:after{
+                opacity: 0;
+              }
+            }
+          }
+
+          @include md{
+            padding: 10px 15px;
+          }
+          @include sm{
+            padding: 10px 15px;
+          }
+          @include esm{
+            padding: 10px 15px;
+          }
+        }
+        .collapse-wrap{
+          .collapse-body{
+            border-bottom: 1px solid #eaeaea;
+            padding-top: 30px;
+            padding-bottom: 15px;
+            ul{
+              li{
+                list-style-type: none;
+                a{
+                  text-decoration: none;
+                  display: flex;
+                  align-items: flex-start;
+                  font-size: 15px;
+                  color: #818286;
+                  margin-bottom: 15px;
+                  &:before{
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    display: block;
+                    border-radius: $rounded-pill;
+                    background: $red;
+                    margin-top: 8px;
+                    margin-right: 10px;
+                  }
+                  &:hover{
+                    color: $red;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+.page{
+  .main-sag{
     .sag-wrap{
       .sag-top{
         box-shadow: $box-shadow;
@@ -143,13 +297,14 @@ body{
           font-weight: bold;
           font-size: 25px;
           padding: 0px 30px;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           @include esm{
             padding: 0px 10px;
           }
         }
         p{
           padding: 0px 30px;
+          font-size: 15px;
           @include esm{
             padding: 0px 10px;
           }
@@ -158,5 +313,6 @@ body{
     }
   }
 }
+
 .page-aboutus{
 }
