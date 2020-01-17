@@ -21815,6 +21815,96 @@ body {
     width: calc(100% + 50px);
     height: 270px; }
 
+.page-sss .sag-body {
+  background: #fcfcfc !important; }
+  .page-sss .sag-body .accordion {
+    background: transparent !important;
+    background: #fff; }
+    .page-sss .sag-body .accordion .card {
+      border-radius: unset !important;
+      margin-bottom: 20px;
+      background: transparent;
+      border-bottom: 1px solid #e7e7e7; }
+    .page-sss .sag-body .accordion .card-body {
+      font-size: 16px;
+      background: #fff;
+      border-top: 1px solid #e7e7e7; }
+    .page-sss .sag-body .accordion .card-header {
+      padding: 0;
+      border-radius: unset !important; }
+    .page-sss .sag-body .accordion button {
+      width: 100%;
+      padding: 0 0px 0px 30px;
+      font-weight: bold;
+      border-bottom: 1px solid #eaeaea;
+      text-decoration: none;
+      background: #fff;
+      color: #818285;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      text-align: center;
+      border-radius: unset;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .page-sss .sag-body .accordion button:hover, .page-sss .sag-body .accordion button.active, .page-sss .sag-body .accordion button[aria-expanded="true"] {
+        -webkit-box-shadow: -2px 0px 0px #de2d23;
+                box-shadow: -2px 0px 0px #de2d23;
+        color: #ce0000; }
+      .page-sss .sag-body .accordion button:nth-last-child(1) {
+        border-bottom: 0; }
+      .page-sss .sag-body .accordion button i {
+        padding: 20px;
+        border-left: 1px solid #e7e7e7; }
+      .page-sss .sag-body .accordion button[aria-expanded="true"] i {
+        color: #ce0000; }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .page-sss .sag-body .accordion button {
+          padding: 0px 15px;
+          padding-right: 0; } }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        .page-sss .sag-body .accordion button {
+          padding: 0px 15px;
+          padding-right: 0; } }
+      @media (max-width: 575.98px) {
+        .page-sss .sag-body .accordion button {
+          padding: 0px 15px;
+          padding-right: 0; } }
+    .page-sss .sag-body .accordion .collapse-wrap .collapse-body {
+      border-bottom: 1px solid #eaeaea;
+      padding-top: 30px;
+      padding-bottom: 15px; }
+      .page-sss .sag-body .accordion .collapse-wrap .collapse-body ul li {
+        list-style-type: none; }
+        .page-sss .sag-body .accordion .collapse-wrap .collapse-body ul li a {
+          text-decoration: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          font-size: 15px;
+          color: #818286;
+          margin-bottom: 15px; }
+          .page-sss .sag-body .accordion .collapse-wrap .collapse-body ul li a:before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            display: block;
+            border-radius: 50rem;
+            background: #ce0000;
+            margin-top: 8px;
+            margin-right: 10px; }
+          .page-sss .sag-body .accordion .collapse-wrap .collapse-body ul li a:hover {
+            color: #ce0000; }
+
 /*
 *::-webkit-scrollbar-track
 {

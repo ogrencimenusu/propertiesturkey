@@ -494,3 +494,110 @@ body{
     }
   }
 }
+.page-sss{
+  .sag-body{
+    background: #fcfcfc !important;
+    .accordion{
+      background: transparent !important;
+      .card{
+        border-radius: unset !important;
+        margin-bottom: 20px;
+        background: transparent;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      .card-body{
+        font-size: 16px;
+        background: $white;
+        border-top: 1px solid #e7e7e7;
+      }
+
+      .card-header{
+        padding: 0;
+        border-radius: unset !important;
+
+      }
+      background: $white;
+      button{
+        width: 100%;
+        padding: 0 0px 0px 30px;
+        font-weight: bold;
+        border-bottom: 1px solid #eaeaea;
+        text-decoration: none;
+        background: $white;
+        color: #818285;
+        transition: $transition-base-cs;
+        text-align: center;
+        border-radius: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover,&.active,&[aria-expanded="true"]{
+          box-shadow: -2px 0px 0px $red2;
+          color: $red;
+        }
+        &:nth-last-child(1){
+          border-bottom: 0;
+        }
+        i{
+          padding: 20px ;
+          border-left: 1px solid #e7e7e7;
+        }
+        &[aria-expanded="true"]{
+          i{
+            color: $red;
+          }
+        }
+
+        @include md{
+          padding: 0px 15px;
+          padding-right: 0;
+        }
+        @include sm{
+          padding: 0px 15px;
+          padding-right: 0;
+        }
+        @include esm{
+          padding: 0px 15px;
+          padding-right: 0;
+        }
+      }
+      .collapse-wrap{
+        .collapse-body{
+          border-bottom: 1px solid #eaeaea;
+          padding-top: 30px;
+          padding-bottom: 15px;
+          ul{
+            li{
+              list-style-type: none;
+              a{
+                text-decoration: none;
+                display: flex;
+                align-items: flex-start;
+                font-size: 15px;
+                color: #818286;
+                margin-bottom: 15px;
+                &:before{
+                  content: '';
+                  width: 5px;
+                  height: 5px;
+                  display: block;
+                  border-radius: $rounded-pill;
+                  background: $red;
+                  margin-top: 8px;
+                  margin-right: 10px;
+                }
+                &:hover{
+                  color: $red;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+}
