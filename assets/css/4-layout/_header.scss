@@ -1,6 +1,6 @@
 $red2:#de2d23;
 $red:#ef4036;
-
+/*
 *::-webkit-scrollbar-track
 {
   //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -16,6 +16,8 @@ $red:#ef4036;
 {
   background-color: $red;
 }
+*/
+
 body{
   background: #f6f6f6;
 }
@@ -115,6 +117,21 @@ header{
               justify-content: center;
               align-items: center;
               padding: 10px 10px;
+              @include md{
+                &:nth-child(1){
+                  padding-left: 0;
+                }
+              }
+              @include sm{
+                &:nth-child(1){
+                  padding-left: 0;
+                }
+              }
+              @include esm{
+                &:nth-child(1){
+                  padding-left: 0;
+                }
+              }
               &:hover{
                 opacity: .8;
               }
@@ -218,6 +235,9 @@ header{
 
               a{
                 color: #505050;
+                @include esm{
+                  margin-right: 0;
+                }
               }
               .row-header{
                 .sol{
@@ -237,6 +257,10 @@ header{
                     }
                     i{
                       background: transparent;
+                      @include esm{
+                        justify-content: left;
+                        width: 30px;
+                      }
                     }
                   }
                 }
@@ -244,13 +268,22 @@ header{
                   justify-content: space-between;
                   width: 100%;
                   @include esm{
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    text-align: left;
-                    align-items: flex-start;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-right: 0;
                   }
-
                   .dil{
+                    @include esm{
+                      height: unset;
+                    }
+                    a{
+                      @include esm{
+                        margin-right: 10px;
+
+                      }
+                    }
                     img{
                       display: none;
                     }
@@ -258,12 +291,25 @@ header{
                   .para{
                     @include esm{
                       padding-left: 0;
+                      height: unset;
+                      margin-right: 0;
                     }
                     a{
                       background: transparent;
+                      &:nth-last-child(1){
+                        @include esm{
+                          padding-right: 0;
+                        }
+                      }
                     }
                   }
                   .user{
+                    @include esm{
+                      flex: 0 0 100%;
+                      border-top: 1px solid #e8e8e8;
+                      padding-top: 10px;
+                      margin-top: 10px;
+                    }
                     a{
                       @include esm{
                         margin-left: 0;
@@ -347,11 +393,16 @@ main{
   }
   @include esm{
     padding-top: 40px;
-    padding-bottom: 20px;
-
+    padding-bottom: 00px;
+    background-image: url(assets/img/slider-1.jpg);
+    background-size: 200%;
+    background-repeat: no-repeat;
   }
   .row-main{
     justify-content: flex-end;
+    @include esm{
+      margin:0;
+    }
     .filters{
       display: flex;
       flex-direction: row;
@@ -378,7 +429,10 @@ main{
       @include esm{
         flex-direction: column;
         justify-content: unset;
-        padding-bottom: 35px;
+        margin-top: 30px;
+        border-radius: unset;
+        padding: 20px 10px;
+        border: 1px solid #e6e6e6;
       }
       .text-find{
         font-family: "Proxima Nova";
@@ -496,6 +550,7 @@ main{
     margin-right: 80px;
     @include esm{
       justify-content: center;
+      margin-right: 30px;
     }
     .text{
       color: $white;
@@ -548,7 +603,6 @@ main{
     align-items: center;
     font-family: 'Proxima Nova';
     @include esm{
-      display: block;
     }
 
     .baslik{
@@ -568,10 +622,14 @@ main{
       padding-bottom: 20px;
       padding-right: 30px;
       @include esm{
-        background: #f5f5f5;
         padding: 20px;
         text-align: center;
         clip-path:unset;
+        background: $white;
+        box-shadow: unset;
+        span{
+          display: none;
+        }
       }
       a{
         text-decoration: none;
@@ -611,7 +669,7 @@ main{
     }
     @include esm{
       flex-wrap: unset;
-      flex-direction: column;
+      flex-direction: row;
     }
 
     a{
@@ -646,9 +704,11 @@ main{
         text-align: center;
       }
       @include esm{
+        flex: 0 0 60%;
         text-align: center;
         padding: 10px 20px;
         &:nth-child(1){
+          flex: 0 0 30%;
 
         }
 
@@ -1184,9 +1244,9 @@ footer{
           flex: 0 0 50% !important;
         }
         @include esm{
-          flex: 0 0 100% !important;
-
+          flex: 0 0 50% !important;
           order: 4;
+          border-bottom: 1px solid #dadada;
         }
         &:nth-child(1){
           .item-wrap{
@@ -1207,8 +1267,8 @@ footer{
             flex: unset;
           }
           @include esm{
-            flex: unset;
             order: 1;
+            flex: 0 0 100% !important;
           }
 
           .item-wrap{
@@ -1249,7 +1309,9 @@ footer{
             flex: unset;
           }
           @include esm{
-            flex: unset;
+            flex: 0 0 100% !important;
+            align-items: center;justify-content: center;
+            text-align: center !important;
           }
 
           .item-wrap{
@@ -1272,7 +1334,7 @@ footer{
           }
           @include esm{
             padding: 30px 15px !important;
-            text-align: left !important;
+            text-align: left ;
 
           }
           .title{

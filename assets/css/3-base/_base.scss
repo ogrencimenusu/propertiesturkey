@@ -247,18 +247,37 @@ body{
         background: $white;
         width: 100%;
         justify-content: space-between;
+        @include sm{
+          padding-bottom: 10px;
+        }
         @include esm{
           flex-direction: column;
           justify-content:flex-start;
           margin-right: 15px;
           margin-left: 15px;
           width: calc(100% - 30px);
+          padding-bottom: 10px;
         }
         .sol{
           font-weight: bold;
-
+          @include sm{
+            display: flex;
+            align-items: start;
+          }
+          @include esm{
+            display: flex;
+            align-items: start;
+          }
           img{
             margin-right: 15px;
+            @include sm{
+              margin-top: 7px;
+              display: block;
+            }
+            @include esm{
+              margin-top: 7px;
+              display: block;
+            }
           }
         }
         .sag{
@@ -373,5 +392,105 @@ body{
   }
 }
 
-.page-aboutus{
+.page-contact{
+  .sag-body{
+    padding-top: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px !important;
+    background: #fcfcfc !important;
+    h3{
+      font-weight: bolder;
+      color: #505050;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p{
+      padding-left: 0 !important;
+      margin-bottom: 30px;
+    }
+    form{
+      flex: 0 0 46%;
+      @include sm{
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+      }
+      @include esm{
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+      }
+      .btn{
+        margin-left: auto;
+        background: $red;
+        color: $white;
+        padding-left: 30px;
+        padding-right: 30px;
+        img{
+          margin-right: 15px;
+        }
+      }
+      .form-control{
+        background: #fefefe;
+        border: 1px solid #d5d5d5;
+        &::placeholder{
+          color: $dark;
+        }
+      }
+
+    }
+    .address{
+      flex: 0 0 43%;
+      border-right: 1px solid #eaeaea;
+      margin-right: 5%;
+      padding-left: 5%;
+      padding-right: 1%;
+      @include sm{
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+        padding: 0px;
+        margin-right: 0px;
+        border-right: unset;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eaeaea;
+      }
+      @include esm{
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+        padding: 0px;
+        margin-right: 0px;
+        border-right: unset;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eaeaea;
+      }
+      a{
+        display: flex;
+        align-items: start;
+        color: #505050;
+        width: 100%;
+        text-decoration: none;
+        font-size: 17px;
+        margin-bottom: 14px;
+        &:hover{
+          color: $red;
+        }
+        img{
+          margin-top: 5px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+  .harita{
+
+    flex: 0 0 100%;
+    margin-bottom: 50px;
+    iframe{
+      margin-left: -25px;
+      margin-right: -25px;
+      width: calc(100% + 50px);
+      height: 270px;
+
+    }
+  }
 }
