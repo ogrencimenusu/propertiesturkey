@@ -11,18 +11,14 @@
 // $path-fonts     :  '../fonts';
 
 @mixin elg{
-  @media (min-width: 1366px){
+  @media (min-width: 1200px){
     @content;
   }
 }
 
-@mixin lg-custom{
-  @media (min-width: 992px) and (max-width: 1199.98px){
-    @content;
-  }
-}
+
 @mixin lg{
-  @media (min-width: 992px) and (max-width: 1365.98px){
+  @media (min-width: 992px) and (max-width: 1199.98px){
     @content;
   }
 }

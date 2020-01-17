@@ -34,8 +34,8 @@ $grays: map-merge(
   $grays
 );
 //
-$red1=#ef4036;
-$red2=#de2d23;
+$red1:#ef4036;
+$red2:#de2d23;
 //
 $blue:    #1a75cf !default;
 $bluedark:  #083467 !default;
@@ -238,7 +238,7 @@ $border-color:                $gray-300 !default;
 $border-radius:               .25rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
-$border-radius-cs:            15px !default;
+$border-radius-cs:            10px !default;
 
 
 $rounded-pill:                50rem !default;
