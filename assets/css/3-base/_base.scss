@@ -309,6 +309,65 @@ body{
             padding: 0px 10px;
           }
         }
+        .img-text{
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 90px;
+          @include md{
+            flex-direction: column;
+            margin-bottom: 30px;
+
+          }
+          @include sm{
+            flex-direction: column;
+            margin-bottom: 30px;
+
+          }
+          @include esm{
+            flex-direction: column;
+            margin-bottom: 30px;
+
+          }
+          &.img-left{
+            img{
+              order: 1;
+            }
+            .body{
+              order: 2;
+            }
+          }
+          img{
+            order:2;
+            width: 48%;
+            @include md{
+              width: 100%;
+              order: 2 !important;
+            }
+            @include sm{
+              width: 100%;
+              order: 2 !important;
+            }
+            @include esm{
+              width: 100%;
+              order: 2 !important;
+            }
+          }
+          .body{
+            order:1;
+            padding-top: 30px;
+            @include md{
+              order: 2 !important;
+            }
+            @include sm{
+              order: 2 !important;
+            }
+            @include esm{
+              order: 2 !important;
+            }
+            .title{}
+            p{}
+          }
+        }
       }
     }
   }
