@@ -1,19 +1,18 @@
 $red2:#de2d23;
 $red:#ef4036;
 
-html::-webkit-scrollbar-track
+*::-webkit-scrollbar-track
 {
   //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: $dark;
 }
-
-html::-webkit-scrollbar
+*::-webkit-scrollbar
 {
   width: 6px;
   background-color: $dark;
 }
 
-html::-webkit-scrollbar-thumb
+*::-webkit-scrollbar-thumb
 {
   background-color: $red;
 }
@@ -608,11 +607,11 @@ main{
     box-shadow: $box-shadow-sm;
     @include sm{
       flex-wrap: unset;
-      flex-direction: row;
+      flex-direction: column;
     }
     @include esm{
       flex-wrap: unset;
-      flex-direction: row;
+      flex-direction: column;
     }
 
     a{
@@ -644,15 +643,12 @@ main{
         }
       }
       @include sm{
-        flex: 0 0 30%;
         text-align: center;
       }
       @include esm{
-        flex: 0 0 60%;
         text-align: center;
         padding: 10px 20px;
         &:nth-child(1){
-          flex: 0 0 20%;
 
         }
 
