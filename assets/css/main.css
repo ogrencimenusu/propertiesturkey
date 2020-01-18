@@ -21709,6 +21709,7 @@ body {
       margin-right: 15px; }
 
 .page .main-sag .sag-wrap .sag-body {
+  margin-top: 30px;
   color: #818285;
   padding: 25px;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
