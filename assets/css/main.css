@@ -22042,9 +22042,16 @@ body {
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 15px;
   color: #434343;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
   .page-payarlari .sag-body .head img {
-    margin-right: 15px; }
+    margin-right: 15px;
+    margin-top: 3px; }
 
 .page-profil .items .row-main {
   overflow: unset; }
@@ -22217,6 +22224,41 @@ body {
       background: #f35e55 !important; }
   .page-message .accordion button[data-toggle='collapse'][aria-expanded="true"] span.minus-plus:after {
     opacity: 0; }
+
+.page-profilsetting .btn {
+  color: #fff;
+  background: #b1b1b1;
+  margin-left: 15px;
+  float: right;
+  font-weight: bold;
+  padding: 7px 30px; }
+  @media (max-width: 575.98px) {
+    .page-profilsetting .btn {
+      padding: 7px 15px; } }
+  .page-profilsetting .btn[type='submit'] {
+    background: #ce0000; }
+  .page-profilsetting .btn img {
+    margin-right: 15px; }
+
+.page-profilsetting label {
+  font-size: 14px; }
+
+.page-profilsetting .form-control {
+  background: #f9fbfc;
+  border: 1px solid #d5d5d5;
+  min-height: 40px;
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important; }
+  .page-profilsetting .form-control:hover, .page-profilsetting .form-control:focus {
+    border-color: #ce0000; }
+  .page-profilsetting .form-control::-webkit-input-placeholder {
+    color: #343a40; }
+  .page-profilsetting .form-control::-moz-placeholder {
+    color: #343a40; }
+  .page-profilsetting .form-control::-ms-input-placeholder {
+    color: #343a40; }
+  .page-profilsetting .form-control::placeholder {
+    color: #343a40; }
 
 /*
 *::-webkit-scrollbar-track

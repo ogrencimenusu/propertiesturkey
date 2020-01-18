@@ -720,8 +720,11 @@ body{
       padding-bottom: 15px;
       color: #434343;
       margin-bottom: 30px;
+      display: flex;
+      align-items: flex-start;
       img{
         margin-right: 15px;
+        margin-top: 3px;
       }
     }
   }
@@ -884,6 +887,40 @@ body{
         }
       }
 
+    }
+  }
+}
+.page-profilsetting{
+  .btn{
+    color: $white;
+    background: #b1b1b1;
+    margin-left: 15px;
+    float: right;
+    font-weight: bold;
+    padding: 7px 30px;
+    @include esm{
+      padding: 7px 15px;
+    }
+    &[type='submit']{
+      background: $red;
+    }
+    img{
+      margin-right: 15px;
+    }
+  }
+  label{
+    font-size: 14px;
+  }
+  .form-control{
+    background: #f9fbfc;
+    border: 1px solid #d5d5d5;
+    min-height: 40px;
+    box-shadow: unset !important;
+    &:hover,&:focus{
+      border-color: $red;
+    }
+    &::placeholder{
+      color: $dark;
     }
   }
 }
