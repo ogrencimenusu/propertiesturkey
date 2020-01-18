@@ -756,7 +756,6 @@ main{
       }
       @include esm{
         flex: 0 0 100%;
-
       }
 
       .item-wrap{
@@ -770,6 +769,7 @@ main{
           position: relative;
           overflow: hidden;
           img{
+            width: 100%;
             &.item-img{
               @include lg{
                 object-fit: cover;
