@@ -219,6 +219,7 @@ header{
             }
           }
           .navbar-collapse{
+            position: relative;
             width: 100%;
             .head-up{
               background: $white;
@@ -336,9 +337,113 @@ header{
               @include lg{
                 flex-direction: row;
                 margin-top: 30px;
+                justify-content: space-between;
               }
 
               li.nav-item{
+                display: flex;
+                align-items: center;
+                @include md{
+                  display: block;
+                }
+                @include sm{
+                  display: block;
+                }
+                @include esm{
+                  display: block;
+                }
+
+                .dropdown-menu{
+                  border: 0;
+                  border-bottom: 2px solid $red;
+                  border-radius:$border-radius-cs;
+                  box-shadow: $box-shadow-lg;
+                  a.dropdown-item{
+                    &:active, &:focus{
+                      color: $white;
+                      background: $red;
+                    }
+                  }
+                  ul{
+                    li{
+                      list-style-type: none;
+                      a{
+                        text-decoration: none;
+                        color: #505050;
+
+                      }
+                    }
+                  }
+                  &.dropdown-city{
+                    a{
+                      display: flex;
+                      align-items: center;
+                      &:hover{
+                        color: $red;
+                      }
+                      i{
+                        color: #505050;
+                        margin-right: 10px;
+                        font-size: 13px;
+                      }
+
+
+                    }
+                  }
+                  @include elg{
+                    opacity: 0;
+                    top: 35px;
+                    position: absolute;
+                    transform: translateY(30px);
+                    display: block;
+                    visibility: hidden;
+                    transition: $transition-base-cs;
+                  }
+                  @include lg{
+                    opacity: 0;
+                    top: 60px;
+                    position: absolute;
+                    transform: translateY(30px);
+                    display: block;
+                    visibility: hidden;
+                    transition: $transition-base-cs;
+                  }
+                  @include md{
+                    margin-top: 20px;
+                  }
+                  @include sm{
+                    margin-top: 20px;
+                  }
+                  @include esm{
+                    margin-top: 20px;
+                  }
+
+
+                  &.dropdown-mega{
+                    width: 100%;
+                    left: 0;
+                  }
+                }
+
+                &:hover{
+                  .dropdown-menu{
+                    @include elg{
+                      opacity: 1;
+                      visibility: unset;
+                      display: block;
+                      transform: translateY(0px);
+                    }
+                    @include lg{
+                      opacity: 1;
+                      visibility: unset;
+                      display: block;
+                      transform: translateY(0px);
+                    }
+                  }
+                  a.nav-link,a.nav-arrow{
+                    color: $red;
+                  }
+                }
                 a.nav-link{
                   font-family: Nunito;
                   font-weight: bolder;
@@ -348,24 +453,53 @@ header{
                   color: #505050;
                   @include lg{
                     padding: 0px;
-                    margin-right: 40px;
+                    margin-right: 0px;
+                    padding-right: 10px;
+                    float: left;
                   }
                   @include md{
                     padding: 0px;
                     margin-top: 15px;
+                    float: left;
                   }
                   @include sm{
                     padding: 0px;
                     margin-top: 15px;
+                    float: left;
+
                   }
                   @include esm{
                     padding: 0px;
                     margin-top: 15px;
-                  }
-                  &:hover{
-                    color: $red;
+                    float: left;
+
                   }
                 }
+                a.nav-arrow{
+                  color: #505050;
+                  padding-right: 10px;
+
+                  i{
+                    &:before{
+                      font-size: 14px;
+                      position: relative;
+                      top: -1px;
+                      @include md{
+                        top: 10px;
+                        padding: 10px 15px;
+                      }
+                      @include sm{
+                        top: 10px;
+                        padding: 10px 15px;
+                      }@include esm{
+                         top: 10px;
+                         padding: 10px 15px;
+                       }
+
+                    }
+                  }
+                }
+
               }
             }
           }
@@ -413,6 +547,7 @@ main{
       background: rgba($white,.90);
       border-radius: $border-radius-cs;
       padding: 40px 40px;
+      position: relative;
 
       @include lg{
         justify-content: unset;
@@ -463,6 +598,8 @@ main{
         }
       }
       .filter{
+        position: unset;
+
         @include lg{
           margin-bottom: 30px;
         }
@@ -474,6 +611,61 @@ main{
         }
         @include esm{
           margin-bottom: 10px;
+        }
+        .dropdown-menu{
+          a{
+            border-radius: $border-radius;
+            display: flex;
+            align-items: center;
+            span.check-mark{
+              top:15px;
+              right: 25px;
+            }
+            &:focus, &:active,&.selected{
+              background: $red;
+              color: $white;
+              outline: 0;
+              box-shadow: $box-shadow-sm;
+            }
+          }
+        }
+        &.filter-dropdown-mega{
+          .bootstrap-select{
+            width: 100%;
+            max-width:unset !important;
+            position: unset;
+            .dropdown-menu[role="combobox"]{
+              width: 100%;
+              opacity: .95;
+              box-shadow: $box-shadow-lg;
+              top: calc(100% - 10px)  !important;
+              transform: unset !important;
+              ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                  width: 33.333%;
+                  border-radius: $border-radius-cs;
+                  box-sizing: border-box;
+                  padding: 10px;
+                  @include esm{
+                    width: 100%;
+                  }
+
+                  a{
+                    border-radius: $border-radius;
+                    display: flex;
+                    align-items: center;
+                    span.check-mark{
+                      top:15px;
+                      right: 25px;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
         }
         .bootstrap-select{
           width: 100%;
@@ -498,12 +690,16 @@ main{
             border: 1px solid #d4d4d4;
             color: #d4d4d4;
             border-radius: $border-radius-cs;
+
             &:hover{
               color: $dark;
             }
 
             &:after{
               color: #d4d4d4;
+            }
+            a.dropdown-item {
+
             }
           }
         }
@@ -515,13 +711,10 @@ main{
           @include elg{
             flex: 0 0 25%;
           }
-          .bootstrap-select{
-            width: 100%;
-            max-width:unset !important;
-          }
 
         }
         &.filter-bedroom{
+
           @include elg{
             flex: 0 0 15.33333%;
             .dropdown-toggle{

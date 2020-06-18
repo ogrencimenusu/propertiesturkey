@@ -27,6 +27,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
+    "gulp-download": "0.0.1",
     "gulp-font": "^1.0.4",
     "gulp-google-webfonts": "^2.1.0"
   }

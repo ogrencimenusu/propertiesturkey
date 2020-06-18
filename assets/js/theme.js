@@ -4,7 +4,11 @@ $(document).ready(function() {
 
     //Header top
     var clon= $('header .head-up').clone();
+    var clon2= $('header .head-up').clone();
+    $(clon2).find('.sol').remove();
+    $(clon).find('.sag').remove();
     $('header .head-down .collapse').append(clon);
+    $('header .head-down .collapse').prepend(clon2);
 
     //slider-popular
     $('#slider-popular .slideshow').slick({
